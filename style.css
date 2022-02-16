@@ -1,25 +1,46 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
-.back{
-  position: fixed;
-  left: 0;
-  top: 0;
+html, body {
   width: 100%;
   height: 100%;
-  background:url(https://pp.userapi.com/c841122/v841122831/327e/nHt-92F6yc4.jpg) no-repeat top center #efeff1;
-  background-size:cover;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
-.thx{
-  position: fixed;
-  left:50%;
-  transform:translateX(-50%);
-  bottom: 15px;
+
+body * {
+  box-sizing: border-box;
 }
+
+header,
+header nav {
+  width: 100%;
+}
+/*
+ REUSABLE STYLING START
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1rem; font-weight: bold; }
+h6 { font-size: 1rem; }
+
+
+/* start navbar */
+
 nav{
   width: 100%;
   position: fixed;
-  top:50px;
   text-align:center;
 }
+
 nav a{
   font-family: 'Oswald', sans-serif;
   font-weight:500;
@@ -32,56 +53,193 @@ nav a{
   position:relative;
   display:inline-block;
 }
+
 nav a:before{
   content:'';
   position: absolute;
   width: 100%;
   height: 3px;
   background:#16151b;
-  top:47%;
+  top:90%;
   animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
+
 nav a:hover:before{
   animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
-
 }
+
+
 @keyframes in{
-  0%{
-    width: 0;
-    left:0;
-    right:auto;
+    0%{
+      width: 0;
+      left:0;
+      right:auto;
+    }
+    100%{
+      left:0;
+      right:auto;
+      width: 100%;
+    }
   }
-  100%{
-    left:0;
-    right:auto;
+  @keyframes out{
+    0%{
+      width:100%;
+      left: auto;
+      right: 0;
+    }
+    100%{
+      width: 0;
+      left: auto;
+      right: 0;
+    }
+  }
+  @keyframes show{
+    0%{
+      opacity:0;
+      transform:translateY(-10px);
+    }
+    100%{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+  
+  @for $i from 1 through 5 {
+    nav a:nth-child(#{$i}){
+      animation:show .2s #{$i*0.1+1}s ease 1 both;
+    }
+  }
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Responsive navbar */
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+    top: -1rem;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
     width: 100%;
+    border-radius: 10px;
+    background: #333;
   }
-}
-@keyframes out{
-  0%{
-    width:100%;
-    left: auto;
-    right: 0;
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
   }
-  100%{
-    width: 0;
-    left: auto;
-    right: 0;
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
   }
-}
-@keyframes show{
-  0%{
-    opacity:0;
-    transform:translateY(-10px);
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
   }
-  100%{
-    opacity:1;
-    transform:translateY(0);
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    justify-content: normal;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+  
+
+@media (max-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+
+  .navbar .menu-items li{
+      font-size: 1.6rem;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
   }
 }
 
-@for $i from 1 through 5 {
-  nav a:nth-child(#{$i}){
-    animation:show .2s #{$i*0.1+1}s ease 1 both;
-  }
 }
