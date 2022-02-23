@@ -34,7 +34,7 @@
             <h1>Voetbal | Nieuws</h1>
             <div class="meta">
                 <img class="author" src="./original.jpg" alt=""><br>
-                door Korné & liam</a>
+                door Korné & Liam</a>
             </div>
         </div>
     </div>
@@ -45,20 +45,19 @@
                 <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
             </div>
             <div class="card-body">
-                <span class="tag tag-teal">Technology</span>
+                <span class="tag tag-teal">Vraag van de week</span>
                 <h4>
-                    Why is the Tesla Cybertruck designed the way it
-                    is?
+                    Waarom is Gerwin zo dik?
                 </h4>
                 <p>
-                    An exploration into the truck's polarising design
+                    Daar gaan we deze week achter komen
                 </p>
                 <div class="user">
                     <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
                         alt="user" />
                     <div class="user-info">
-                        <h5>July Dec</h5>
-                        <small>2h ago</small>
+                        <h5>Arjan de Ruijter</h5>
+                        <small>2743874387438748h ago</small>
                     </div>
                 </div>
             </div>
@@ -81,8 +80,8 @@
                     <img src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo"
                         alt="user" />
                     <div class="user-info">
-                        <h5>Eyup Ucmaz</h5>
-                        <small>Yesterday</small>
+                        <h5>Erdogan</h5>
+                        <small>70 years ago</small>
                     </div>
                 </div>
             </div>
@@ -133,7 +132,7 @@
 
         <footer>
             <div class="footer-content">
-                <h3>Voetbal Nieuws</h3>
+                <h3 style="margin-right: 20%;">Voetbal Nieuws</h3>
                 <p>Voetbal Nieuws is een website met het aller nieuwste voetbal nieuws.<br> Login om het archief en meer nieuws te zien.</p>
                 <ul class="socials">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
