@@ -273,7 +273,7 @@ a{
     left:0;
       -webkit-backface-visibility: hidden;
       -webkit-transform: translateZ(0); backface-visibility: hidden;
-    scale(1.0, 1.0);
+    scale (1.0, 1.0);
       transform: translateZ(0);
     background-image: url(https://assets.funnygames.nl/1/2821/55667/336x189/1-on-1-soccer.webp) ;
     background-size:100%;
@@ -442,9 +442,9 @@ a{
 .footer-content h3{
     font-size: 2.1rem;
     font-weight: 500;
-    margin-right: 20%;
     text-transform: capitalize;
     line-height: 3rem;
+    margin-right: 20%;
 }
 .footer-bottom p{
     max-width: 500px;

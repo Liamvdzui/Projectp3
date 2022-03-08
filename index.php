@@ -132,7 +132,7 @@
 
         <footer>
             <div class="footer-content">
-                <h3 style="margin-right: 20%;">Voetbal Nieuws</h3>
+                <h3>Voetbal Nieuws</h3>
                 <p>Voetbal Nieuws is een website met het aller nieuwste voetbal nieuws.<br> Login om het archief en meer nieuws te zien.</p>
                 <ul class="socials">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
