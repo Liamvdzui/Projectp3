@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homepage.css">
     <!-- wordt alleen gebruikt voor incons in footer -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -26,7 +26,7 @@
                 </div>
                 <ul class="menu-items">
                     <li><a href="#home">Home</a></li>
-                    <li><a class="right" href="homepage.php">login</a></li>
+                    <li><a class="right" href="#contact">Uitloggen</a></li>
                 </ul>
             </div>
         </nav>
@@ -130,6 +130,97 @@
         </div>
 </div>
 
+<div class="cards">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://eu-images.contentstack.com/v3/assets/bltcc7a7ffd2fbf71f5/blt26d4ade721656f7c/61cec0ccf5b6fc1164a2ddbe/Lionel_Messi_Barcelona.jpg?auto=webp&format=pjpg&quality=80&width=1024" alt="rover" />
+            </div>
+            <div class="card-body">
+                <span class="tag tag-teal">Vraag van de week</span>
+                <h4>
+                    Heeft Messi spijt?
+                </h4>
+                <p>
+                    Daar gaan we deze week achter komen
+                </p>
+                <div class="user">
+                    <img src="http://www.yesjazz.eu/wp-content/uploads/2017/09/Mischa_vd_Wekken_1.jpg"
+                        alt="user" />
+                    <div class="user-info">
+                        <h5>UFC Watcher Arjan de Ruijter</h5>
+                        <small>2h ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg"
+                    alt="ballons" />
+            </div>
+            <div class="card-body">
+                <span class="tag tag-purple">Popular</span>
+                <h4>
+                    How to Keep Going When You Don’t Know What’s Next
+                </h4>
+                <p>
+                    The future can be scary, but there are ways to
+                    deal with that fear.
+                </p>
+                <div class="user">
+                    <img src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo"
+                        alt="user" />
+                    <div class="user-info">
+                        <h5>Erdogan</h5>
+                        <small>70 years ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
+            </div>
+            <div class="card-body">
+                <span class="tag tag-pink">Design</span>
+                <h4>
+                    10 Rules of Dashboard Design
+                </h4>
+                <p>
+                    Dashboard Design Guidelines
+                </p>
+                <div class="user">
+                    <img src="https://studyinbaltics.ee/wp-content/uploads/2020/03/3799Ffxy.jpg" alt="user" />
+                    <div class="user-info">
+                        <h5>Jan de man</h5>
+                        <small>1w ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="original.jpg" alt="city" />
+            </div>
+            <div class="card-body">
+                <span class="tag tag-pink">Design</span>
+                <h4>
+                    10 Rules of Dashboard Design
+                </h4>
+                <p>
+                    Dashboard Design Guidelines
+                </p>
+                <div class="user">
+                    <img src="original.jpg" alt="user" />
+                    <div class="user-info">
+                        <h5>Jan de man</h5>
+                        <small>5w ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
         <footer>
             <div class="footer-content">
                 <h3>Voetbal Nieuws</h3>
@@ -147,7 +238,7 @@
                 <div class="footer-menu">
                     <ul class="f-menu">
                         <li><a href="">Home</a></li>
-                        <li><a href="">Login</a></li>
+                        <li><a href="">Uitloggen</a></li>
                     </ul>
                 </div>
             </div>
