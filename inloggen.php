@@ -1,6 +1,6 @@
 <head>
 <link rel="stylesheet" href="inloggen.css">
-<link rel="javascript" href="inloggen.js">
+<script href="inloggen.js"></script>
 </head>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
