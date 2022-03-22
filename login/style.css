@@ -55,3 +55,12 @@ h3 {
     font-weight: normal;
     text-align: center;
 }
+
+label {
+    color: white;
+    margin-right: 2rem;
+}
+
+.bezoeker {
+    margin-right: 4.4rem;
+}

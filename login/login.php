@@ -13,7 +13,7 @@
     if (isset($_POST['username'])) {
         $username = stripslashes($_REQUEST['username']);    // removes backslashes
         $username = mysqli_real_escape_string($con, $username);
-        $password = stripslashes($_REQUEST['password']);
+        $password = stripslashes($_REQUEST['wachtwoord']);
         $password = mysqli_real_escape_string($con, $password);
         // Check user is exist in the database
         $query    = "SELECT * FROM `users` WHERE username='$username'

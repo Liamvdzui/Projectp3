@@ -14,11 +14,11 @@ include("auth_session.php");
 <body>
     <div class="form">
 <form action="/action_page.php">
-<input type="radio" id="html" name="fav_language" value="HTML" >
-<label for="html">Bezoeker</label><br>
+
+<label for="html">Bezoeker</label>  
 <input type="button" onclick="window.location.href = 'http://projectp3.be/Projectp3/index_bezoeker.php';" value="Submit"/>
-<br> <br> <input  type="radio" id="css" name="fav_language" value="CSS"  required="required" >
- <label for="css">Editor</label><br>
+ <br>
+ <label class="bezoeker" for="css">Editor</label>
  <input type="button" onclick="window.location.href = 'http://projectp3.be/Projectp3/login/password.php';" value="Submit"/>
  <br>
  
