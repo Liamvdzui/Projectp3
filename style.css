@@ -278,8 +278,8 @@ a{
     background-image: url(https://assets.funnygames.nl/1/2821/55667/336x189/1-on-1-soccer.webp) ;
     background-size:100%;
     background-attachment:fixed;
-    animation: grow 200s  linear 10ms infinite;
-    transition:all 0.4s ease-in-out;
+    animation: grow 0.1s  linear 10ms infinite;
+    transition:all 0.2s ease-in-out;
     z-index:-2
   }
 

@@ -3,7 +3,7 @@
    $servername = "localhost";
    $username = "root";
    $password = "";
-   $dbname = "voetbalnieuws";
+   $dbname = "voetbal";
 
 //contact met database
    $conn = mysqli_connect($servername, $username, $password, $dbname);  

@@ -26,7 +26,7 @@
                 </div>
                 <ul class="menu-items">
                     <li><a href="#home">Home</a></li>
-                    <li><a class="right" href="./login/login.php">login</a></li>
+                    <li><a class="right" href="./login/logout.php">Loguit</a></li>
                 </ul>
             </div>
         </nav>
