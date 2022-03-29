@@ -31,7 +31,7 @@
             </div>
         </nav>
         <div class="info">
-            <h1>Voetbal | Nieuws</h1>
+            <h1>Voetbal | Nieuws | Editor</h1>
             <div class="meta">
                 <img class="author" src="./original.jpg" alt=""><br>
                 door Korné & Liam</a>

@@ -20,10 +20,25 @@
                      AND password='" . md5($password) . "'";
         $result = mysqli_query($con, $query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
+        $record = mysqli_fetch_assoc($result);
+        
         if ($rows == 1) {
+            // var_dump($record);exit();
             $_SESSION['username'] = $username;
+            $_SESSION['userrole'] = $record['userrole'];
             // Redirect to user dashboard page
-            header("Location: dashboard.php");
+            switch($record['userrole']) {
+                case 'editor':
+                    header("Location: ../index_editor.php");
+                break;
+                case 'gebruiker':
+                    header("Location: ../index_bezoeker.php");
+                break;
+                default:
+                    header("Location: ../index_bezoeker.php");
+                break;                    
+            }
+            // header("Location: dashboard.php");
         } else {
             echo "<div class='form'>
                   <h3>Verkeerde Username/password.</h3><br/>

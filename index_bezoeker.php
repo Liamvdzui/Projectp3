@@ -25,7 +25,8 @@
                     <span class="line line3"></span>
                 </div>
                 <ul class="menu-items">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="./index_bezoeker.php">Home</a></li>
+                    <li><a href="./archief.php">Archief</a></li>
                     <li><a class="right" href="./login/logout.php">Loguit</a></li>
                 </ul>
             </div>
