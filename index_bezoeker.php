@@ -41,95 +41,39 @@
     </div>
 
     <div class="cards">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
-            </div>
-            <div class="card-body">
-                <span class="tag tag-teal">Vraag van de week</span>
-                <h4>
-                    Waarom is Gerwin zo dik?
-                </h4>
-                <p>
-                    Daar gaan we deze week achter komen
-                </p>
-                <div class="user">
-                    <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
-                        alt="user" />
-                    <div class="user-info">
-                        <h5>Arjan de Ruijter</h5>
-                        <small>2743874387438748h ago</small>
-                    </div>
+    <?php
+   include("cards/connect_db.php");
+   $sql = "SELECT * FROM `nieuws`  ORDER BY `id` DESC LIMIT 4";
+   $result = $conn->query($sql);
+
+   
+   if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo '
+            <div class="card">
+                <div class="card-header">
+                    <img src="'. $row["img"] .'" alt="city" width="200px" />
                 </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg"
-                    alt="ballons" />
-            </div>
-            <div class="card-body">
-                <span class="tag tag-purple">Popular</span>
-                <h4>
-                    How to Keep Going When You Don’t Know What’s Next
-                </h4>
-                <p>
-                    The future can be scary, but there are ways to
-                    deal with that fear.
-                </p>
-                <div class="user">
-                    <img src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo"
-                        alt="user" />
-                    <div class="user-info">
-                        <h5>Erdogan</h5>
-                        <small>70 years ago</small>
-                    </div>
+                <div class="card-body">
+                    <span class="tag tag-pink">Recent news</span>
+                    <h4>
+                        '. $row["titel"] .'
+                    </h4>
+                    <p>
+                        '. $row["text"] .'
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
-            </div>
-            <div class="card-body">
-                <span class="tag tag-pink">Design</span>
-                <h4>
-                    10 Rules of Dashboard Design
-                </h4>
-                <p>
-                    Dashboard Design Guidelines
-                </p>
-                <div class="user">
-                    <img src="https://studyinbaltics.ee/wp-content/uploads/2020/03/3799Ffxy.jpg" alt="user" />
-                    <div class="user-info">
-                        <h5>Carrie Brewer</h5>
-                        <small>1w ago</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
-            </div>
-            <div class="card-body">
-                <span class="tag tag-pink">Design</span>
-                <h4>
-                    10 Rules of Dashboard Design
-                </h4>
-                <p>
-                    Dashboard Design Guidelines
-                </p>
-                <div class="user">
-                    <img src="https://studyinbaltics.ee/wp-content/uploads/2020/03/3799Ffxy.jpg" alt="user" />
-                    <div class="user-info">
-                        <h5>Carrie Brewer</h5>
-                        <small>1w ago</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
+            </div>';
+        }
+  } else {
+    echo "0 results";
+  }
+
+
+
+   ?>
+    </div>
 
         <footer>
             <div class="footer-content">

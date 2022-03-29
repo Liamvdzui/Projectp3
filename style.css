@@ -342,10 +342,11 @@ a{
 }
 
 .card-header img {
-  width: 100%;
-  height: 20%;
+  width: -webkit-fill-available;
+  height: auto;
   object-fit: cover;
 }
+
 .card-body {
   display: flex;
   flex-direction: column;
@@ -537,10 +538,4 @@ display: block;
 
 .marginleft {
   margin-left: 20rem;
-}
-
-.cardpassword{
-  margin: auto;
-  margin-top: 10rem;
-  color 
 }
