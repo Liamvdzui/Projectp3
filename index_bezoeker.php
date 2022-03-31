@@ -25,7 +25,7 @@
                     <span class="line line3"></span>
                 </div>
                 <ul class="menu-items">
-                    <li><a href="./index_bezoeker.php">Home</a></li>
+                <li><a href="./index_bezoeker.php">Home</a></li>
                     <li><a href="./archief.php">Archief</a></li>
                     <li><a class="right" href="./login/logout.php">Loguit</a></li>
                 </ul>
@@ -53,7 +53,7 @@
         echo '
             <div class="card">
                 <div class="card-header">
-                    <img src="'. $row["img"] .'" alt="city" width="200px" />
+                    <img src="'. $row["img"] .'" alt="img" width="200px" />
                 </div>
                 <div class="card-body">
                     <span class="tag tag-pink">Recent news</span>

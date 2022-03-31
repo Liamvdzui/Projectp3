@@ -25,15 +25,15 @@
                     <span class="line line3"></span>
                 </div>
                 <ul class="menu-items">
-                    <li><a href="./index_editor.php">Home</a></li>
+                    <li><a href="./index_bezoeker.php">Home</a></li>
                     <li><a href="./archief_editor.php">Archief</a></li>
-                    <li><a href="./newsadd.php">toevoegen</a></li>
+                    <li><a href="./newsadd.php">Toevoegen</a></li>
                     <li><a class="right" href="./login/logout.php">Loguit</a></li>
                 </ul>
             </div>
         </nav>
         <div class="info">
-            <h1>Voetbal | Nieuws | Editor</h1>
+            <h1>Voetbal | Nieuws | Archief</h1>
             <div class="meta">
                 <img class="author" src="./original.jpg" alt=""><br>
                 door Korné & Liam</a>
@@ -44,7 +44,7 @@
     <div class="cards">
     <?php
    include("cards/connect_db.php");
-   $sql = "SELECT * FROM `nieuws`  ORDER BY `id` DESC LIMIT 4";
+   $sql = "SELECT * FROM `nieuws`  ORDER BY `id` DESC LIMIT 100";
    $result = $conn->query($sql);
 
    
@@ -58,6 +58,8 @@
                 </div>
                 <div class="card-body">
                     <span class="tag tag-pink">Recent news</span>
+                    <span class="tag tag-pink">Recent news</span>
+                    <span class="tag right tag-pink">Recent news</span>
                     <h4>
                         '. $row["titel"] .'
                     </h4>

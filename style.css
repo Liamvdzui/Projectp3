@@ -119,6 +119,7 @@ nav a:hover:before{
   order: 2;
   display: flex;
   justify-content: center;
+  padding: 0;
 }
 
 .menu-items li {
@@ -380,23 +381,6 @@ a{
   font-size: 13px;
   margin: 0 0 40px;
 }
-.user {
-  display: flex;
-  margin-top: auto;
-}
-
-.user img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-.user-info h5 {
-  margin: 0;
-}
-.user-info small {
-  color: #545d7a;
-}
 
 /* responsive cards */
 
@@ -539,3 +523,4 @@ display: block;
 .marginleft {
   margin-left: 20rem;
 }
+
