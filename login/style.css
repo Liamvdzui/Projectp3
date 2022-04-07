@@ -1,9 +1,8 @@
 body {
-     /*  background-image: url(https://wallpaperaccess.com/full/1508717.jpg); */
-    background-image: url(https://wallpaperaccess.com/full/2135183.jpg); 
-    background-repeat: no-repeat;
-    background-size: cover;
+    
     font-family: 'Oswald', sans-serif;
+    background-image: none;
+    background-color:#333;
 }
 .form {
     margin: 50px auto;
@@ -27,6 +26,7 @@ h1.login-title {
     height: 25px;
     width: calc(100% - 23px);
     resize: vertical;
+    border-radius: 5px;
 }
 
 
@@ -44,6 +44,7 @@ h1.login-title {
     font-size: 16px;
     text-align: center;
     cursor: pointer;
+    border-radius: 5px;
 }
 .link {
     color: rgb(196, 196, 196);
@@ -175,8 +176,18 @@ nav{
   }
   
   /* Responsive navbar */
+
+  @media (min-width: 1200px) {
+
+    body {
+       /*  background-image: url(https://wallpaperaccess.com/full/1508717.jpg); */
+    background-image: url(https://wallpaperaccess.com/full/2135183.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
   
   @media (max-width: 768px) {
+
     .navbar {
       opacity: 0.95;
       top: -1rem;
@@ -286,5 +297,6 @@ nav{
       font-weight: 500;
     }
   }
+
   
   }
