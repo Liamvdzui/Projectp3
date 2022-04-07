@@ -15,22 +15,7 @@
 <body class="addnews">
 
 
-        <nav class="navbar">
-            <div class="navbar-container container">
-                <input type="checkbox" name="" id="">
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
-                </div>
-                <ul class="menu-items">
-                    <li><a href="./index_editor.php">Home</a></li>
-                    <li><a href="./archief_editor.php">Archief</a></li>
-                    <li><a href="./newsadd.php">Toevoegen</a></li>
-                    <li><a class="right" href="./login/logout.php">Loguit</a></li>
-                </ul>
-            </div>
-        </nav>
+      
     
     
     <?php
@@ -64,6 +49,24 @@
         }
     } else {
 ?>
+
+<nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="./index_editor.php">Home</a></li>
+                    <li><a href="./archief_editor.php">Archief</a></li>
+                    <li><a href="./newsadd.php">Toevoegen</a></li>
+                    <li><a class="right" href="./login/logout.php">Loguit</a></li>
+                </ul>
+            </div>
+        </nav>
+        
 <div class="addnewsform">
     <form class="form artikel-add" action="" method="post">
         <h1 class="login-title">artikel toevoegen</h1>

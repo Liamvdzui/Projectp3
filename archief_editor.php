@@ -57,9 +57,10 @@
                     <img src="'. $row["img"] .'" alt="city" width="200px" />
                 </div>
                 <div class="card-body">
+                <div class="ding">
                     <span class="tag tag-pink">Recent news</span>
-                    <span class="tag tag-pink">Recent news</span>
-                    <span class="tag right tag-pink">Recent news</span>
+                  <div> <img src="./icons/b_edit.png"> <img src="./icons/b_drop.png"></div>
+                  </div>
                     <h4>
                         '. $row["titel"] .'
                     </h4>

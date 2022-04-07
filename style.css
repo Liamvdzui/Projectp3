@@ -276,10 +276,10 @@ a{
       -webkit-transform: translateZ(0); backface-visibility: hidden;
     scale (1.0, 1.0);
       transform: translateZ(0);
-    background-image: url(https://assets.funnygames.nl/1/2821/55667/336x189/1-on-1-soccer.webp) ;
+    background-image: url(https://www.foodspring.nl/magazine/wp-content/uploads/2021/04/Fussball.jpg.webp) ;
     background-size:100%;
     background-attachment:fixed;
-    animation: grow 20s  linear 10ms infinite;
+    animation: grow 150s  linear 10ms infinite;
     transition:all 0.2s ease-in-out;
     z-index:-2
   }
@@ -357,6 +357,12 @@ a{
   min-height: 50%;
 }
 
+.ding {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .tag {
   background: #cccccc;
   border-radius: 50px;
@@ -367,12 +373,10 @@ a{
   text-transform: uppercase;
   cursor: pointer;
 }
-.tag-teal {
-  background-color: #47bcd4;
+.tag-white {
+  background-color: white;
 }
-.tag-purple {
-  background-color: #5e76bf;
-}
+
 .tag-pink {
   background-color: #cd5b9f;
 }
