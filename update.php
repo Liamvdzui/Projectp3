@@ -38,7 +38,7 @@
         if ($result) {
             echo "<div class='form'>
                   <h3>Het artikel zal op de homepage verschijnen</h3><br/>
-                  <p class='link'>klik <a href='newsadd.php'>hier</a> om er nog een toe te voegen </p>
+                  <p class='link'>klik <a href='newsadd.php'>hier</a> om naar het archief te gaan </p>
                   <p class='link'>klik <a href='index_editor.php'>hier</a> om naar de homepage te gaan</p>
                   </div>";
         }
@@ -64,10 +64,10 @@
         
 <div class="addnewsform">
     <form class="form artikel-add" action="" method="post">
-        <h1 class="login-title">artikel toevoegen</h1>
+        <h1 class="login-title">artikel bewerken</h1>
         <input type="text" class="login-input" name="img" placeholder="Img" required />
         <input type="text" class="login-input" name="titel" placeholder="Titel">
-        <textarea type="text" class="login-input" name="text" placeholder="Text"> </textarea>
+        <input type="text" class="login-input" name="text" placeholder="Text">
         <input type="submit" name="submit" value="Toevoegen" class="login-button">
     </form>
 <?php
