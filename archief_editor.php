@@ -59,7 +59,7 @@
                 <div class="card-body">
                 <div class="ding">
                     <span class="tag tag-pink">Recent news</span>
-                  <div> <img src="./icons/b_edit.png"> <img src="./icons/b_drop.png"></div>
+                  <div> <a href="update.php?id=' . $row["id"] . '"><img src="./icons/b_edit.png"></a> <img src="./icons/b_drop.png"></div>
                   </div>
                     <h4>
                         '. $row["titel"] .'
@@ -73,7 +73,6 @@
   } else {
     echo "0 results";
   }
-
 
 
    ?>

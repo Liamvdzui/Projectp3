@@ -1,3 +1,18 @@
+<?php
+
+    $id = $_GET["id"];
+
+    include("./cards/connect_db.php");
+
+    $sql = "SELECT * FROM `nieuws` WHERE `id` = $id";
+
+    $result = mysqli_query($conn, $sql);
+
+    $record = mysqli_fetch_assoc($result);
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -32,13 +47,16 @@
         $titel    = mysqli_real_escape_string($conn, $titel);
         $text = stripslashes($_REQUEST['text']);
         $text = mysqli_real_escape_string($conn, $text);
-        $query    = "INSERT into `nieuws` (`img`, `titel`, `text`)
-                     VALUES ('$img', '$titel', '$text')";
+        $query    = "UPDATE `nieuws` 
+        SET `img` = '$img',
+            `titel` = '$titel',
+            `text` =  '$text'
+        WHERE `id` = $id;";
         $result   = mysqli_query($conn, $query);
         if ($result) {
             echo "<div class='form'>
-                  <h3>Het artikel zal op de homepage verschijnen</h3><br/>
-                  <p class='link'>klik <a href='newsadd.php'>hier</a> om er nog een toe te voegen </p>
+                  <h3>U heeft het artikel bewerkt</h3><br/>
+                  <p class='link'>klik <a href='archief_editor.php'>hier</a> om naar het archief te gaan </p>
                   <p class='link'>klik <a href='index_editor.php'>hier</a> om naar de homepage te gaan</p>
                   </div>";
         }
@@ -64,16 +82,20 @@
         
 <div class="addnewsform">
     <form class="form artikel-add" action="" method="post">
-        <h1 class="login-title">artikel toevoegen</h1>
-        <input type="text" class="login-input" name="img" placeholder="Img" required />
-        <input type="text" class="login-input" name="titel" placeholder="Titel">
-        <textarea type="text" class="login-input" name="text" placeholder="Text"></textarea>
-        <input type="submit" name="submit" value="Toevoegen" class="login-button">
+        <h1 class="login-title">artikel bewerken</h1>
+        <input type="text" class="login-input" name="img" placeholder="Img" value="<?php echo $record["img"]; ?>" required />
+        <input type="text" class="login-input" name="titel" placeholder="Titel" value="<?php echo $record["titel"]; ?>" required /> 
+        <textarea type="text" class="login-input" name="text" placeholder="Text" required></textarea>
+        <input type="hidden" value="<?php echo $id; ?>" name ="id">
+        <input type="submit" name="submit" value="Bewerk" class="login-button">
     </form>
-<?php
+
+    <?php
     }
-?>
+    ?>
+
 </div>
+
  
 </body>
 

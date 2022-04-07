@@ -2,7 +2,7 @@ body {
     
     font-family: 'Oswald', sans-serif;
     background-image: none;
-    background-color:#333;
+    background-color:rgb(79, 79, 79);
 }
 .form {
     margin: 50px auto;
@@ -23,7 +23,6 @@ h1.login-title {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 25px;
-    height: 25px;
     width: calc(100% - 23px);
     resize: vertical;
     border-radius: 5px;
@@ -59,6 +58,10 @@ h3 {
     font-weight: normal;
     text-align: center;
     color: white;
+}
+
+textarea {
+  height: 200px;
 }
 
 label {
