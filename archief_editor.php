@@ -59,7 +59,7 @@
                 <div class="card-body">
                 <div class="ding">
                     <span class="tag tag-pink">Recent news</span>
-                  <div> <a href="update.php?id=' . $row["id"] . '"><img src="./icons/b_edit.png"></a> <img src="./icons/b_drop.png"></div>
+                  <div> <a href="update.php?id=' . $row["id"] . '"><img src="./icons/b_edit.png"></a> <a href="delete.php?id=' . $row["id"] . '"><img src="./icons/b_drop.png"></a></div>
                   </div>
                     <h4>
                         '. $row["titel"] .'

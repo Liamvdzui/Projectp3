@@ -406,6 +406,14 @@ a{
   }
 }
 
+.middle-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+  margin-top: 3rem;
+}
+
+
 /* footer */
 
 .footer{
