@@ -18,22 +18,14 @@
     <?php
     require('./cards/connect_db.php');
     // When form submitted, insert values into the database.
-    if (isset($_REQUEST['img'])) {
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-        // removes backslashes
-        $img = stripslashes($_REQUEST['img']);
-        //escapes special characters in a string
-        $img = mysqli_real_escape_string($conn, $img);
-        $titel    = stripslashes($_REQUEST['titel']);
-        $titel    = mysqli_real_escape_string($conn, $titel);
-        $text = stripslashes($_REQUEST['text']);
-        $text = mysqli_real_escape_string($conn, $text);
-        $query    = "UPDATE `nieuws` 
-        SET `img` = '$img',
-            `titel` = '$titel',
-            `text` =  '$text'
-        WHERE `id` = $id;";
+    if (isset($_GET['choose'])) {
+        if (!empty($_GET["choose"]) ){
+            if ($_GET['choose'] == 'nee'){
+                header("Location:http://projectp3.be/Projectp3/archief_editor.php");
+            } elseif ($_GET['choose'] == 'ja'){
+                if (!empty($_GET["id"]) ){
+$GETid = $_GET['id'];
+                    $query    = "DELETE FROM `nieuws` WHERE `id` = $GETid";
         $result   = mysqli_query($conn, $query);
         if ($result) {
             echo "<div class='form'>
@@ -42,9 +34,14 @@
                   <p class='link'>klik <a href='index_editor.php'>hier</a> om naar de homepage te gaan</p>
                   </div>";
         }
-    } else {
-?>
+    }
+            }
 
+        }
+        
+    } else {
+        
+?>
     <nav class="navbar">
         <div class="navbar-container container">
             <input type="checkbox" name="" id="">
@@ -61,16 +58,11 @@
             </ul>
         </div>
     </nav>
-
-
-    <?php
-    }
-    ?>
-
 <div class="middle-2">
     <?php
    include("cards/connect_db.php");
-   $sql = "SELECT * FROM `nieuws`  WHERE `id` = 1";
+   $id = $_GET["id"];
+   $sql = "SELECT * FROM `nieuws`  WHERE `id` = $id";
    $result = $conn->query($sql);
 
    
@@ -93,20 +85,30 @@
                     </p>
                 </div>
             </div>
-            <div class="form">
+            <div class="form" >
+            <form action="delete.php" method="GET">
                   <h3>Weet u zeker dat u het linksstaande artikel wilt verwijderen</h3><br/>
-                  <input type="submit" name="submit" value="Ja" class="delete-button">
-                  <input type="submit" name="submit" value="Nee" class="delete-button">
+                  <input id="submit" type="submit" name="choose" value="ja" class="delete-button">
+                  <input type="submit" name="choose" value="nee" class="delete-button">
+                  <input type="hidden" value="'. $row["id"] .'" name ="id">
                   <p class="link">klik <a href="archief_editor.php">hier</a> om naar het archief te gaan </p>
                   <p class="link">klik <a href="index_editor.php">hier</a> om naar de homepage te gaan</p>
-                  </div>
+                  
+                  </form></div>
+                  
                   ';
         }
   } else {
-    echo "0 results";
+    echo "Bericht is al verwijderd of bestaat niet";
   }
    ?>
 </div>
+
+
+    <?php
+    }
+    ?>
+
 
 
 </body>
