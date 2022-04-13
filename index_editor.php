@@ -54,7 +54,7 @@
         echo '
             <div class="card">
                 <div class="card-header">
-                    <img src="'. $row["img"] .'" alt="city" width="200px" />
+                    <img src="'. $row["img"] .'" alt="img" width="200px" />
                 </div>
                 <div class="card-body">
                     <span class="tag tag-pink">Recent news</span>
